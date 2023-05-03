@@ -12,6 +12,6 @@ public class NoTelpException extends Exception{
     
     
     public void showMessage(){
-        System.out.println("");
+        System.out.println("[!] Nomor Telepon harusantara 11-13 [!]");
     }
 }

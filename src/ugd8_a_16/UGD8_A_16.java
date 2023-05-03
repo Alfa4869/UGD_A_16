@@ -28,7 +28,12 @@ public class UGD8_A_16 {
         String nama, noTelp, id;
         float gajiPokok, bonus;
         
+        String see = "";
+        
+        
         try{
+            
+            see = "CS";
             // CS
             System.out.println("Masukan Nama        : "); nama = br.readLine();
             System.out.println("Masukan Nomor Telp  : "); noTelp = br.readLine();
@@ -37,8 +42,10 @@ public class UGD8_A_16 {
             System.out.println("Masukan Bonus       : "); bonus = Float.parseFloat(br.readLine());
             
             CustomerService CS = new CustomerService(id,bonus,nama,noTelp, gajiPokok);
-            CS.totalGaji();
+            CS.showData();
             
+            
+            see = "Admin";
             // Admin
             System.out.println("Masukan Nama        : "); nama = br.readLine();
             System.out.println("Masukan Nomor Telp  : "); noTelp = br.readLine();
@@ -47,7 +54,7 @@ public class UGD8_A_16 {
             System.out.println("Masukan Bonus       : "); bonus = Float.parseFloat(br.readLine());
             
             Admin Ad = new Admin(id,bonus,nama,noTelp, gajiPokok);
-            Ad.totalGaji();
+            Ad.showData();
             
         }catch(NameException e){
             e.showMessage();
@@ -56,6 +63,11 @@ public class UGD8_A_16 {
         }catch(NoTelpException e){
             e.showMessage();
         }catch(IdException e){
+            if (see == "cS") {
+                e.showMessageCS();
+            }else{
+                e.showMessageAdmin();
+            }
             e.showMessage();
         }catch(BonusException e){
             e.showMessage();

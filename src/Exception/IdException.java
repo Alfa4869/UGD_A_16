@@ -11,6 +11,6 @@ package Exception;
 public class IdException extends Exception{
     
     public void showMessage(){
-        System.out.println("");
+        System.out.println("[!] Id Admin Harus ada unsur 'ADM-'[!]");
     }
 }

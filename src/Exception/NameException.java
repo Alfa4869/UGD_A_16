@@ -11,6 +11,6 @@ package Exception;
 public class NameException extends Exception{
     
     public void showMessage(){
-        
+        System.out.println("[!] Nama Tidak Boleh Kosong[!]");
     }
 }

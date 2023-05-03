@@ -11,6 +11,6 @@ package Exception;
 public class BonusException extends Exception{
  
     public void showMessage(){
-        System.out.println("");
+        System.out.println("“[!] Bonus Lembur Admin Harus diantara500000 dan 1200000 [!]”");
     }
 }

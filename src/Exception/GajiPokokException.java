@@ -11,6 +11,6 @@ package Exception;
 public class GajiPokokException extends Exception{
     
     public void showMessage(){
-        System.out.println("");
+        System.out.println("[!] Gaji Pokok Harus LebihDari 2000000 [!]");
     }
 }
