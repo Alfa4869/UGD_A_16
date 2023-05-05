@@ -34,6 +34,7 @@ public class Admin extends Pegawai implements IGaji{
     }
 
     
+    @Override
     public float totalGaji() {
         
         return (gajiPokok + bonusLembur) - (gajiPokok + bonusLembur) * 0.3f;

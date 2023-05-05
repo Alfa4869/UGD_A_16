@@ -10,7 +10,11 @@ package Exception;
  */
 public class IdException extends Exception{
     
-    public void showMessage(){
+    public void showMessageCS(){
+        System.out.println("[!] Id CS Harus ada unsur 'CS-'[!]");
+    }
+    
+    public void showMessageAdmin(){
         System.out.println("[!] Id Admin Harus ada unsur 'ADM-'[!]");
     }
 }
