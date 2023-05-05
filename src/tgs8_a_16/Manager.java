@@ -14,12 +14,16 @@ public class Manager extends Pegawai implements IGaji {
     public Manager(String IDManager, String alamatManager, float bonusBulanan, String nama, String notelp, float gajiPokok)
     throws ExceptionBonus, ExceptionGajiPokok, ExceptionID, ExceptionNama, ExceptionNomorTelepon, ExceptionAlamat {
         super(nama, notelp, gajiPokok);
-        if(!IDManager.contains("MNGR-") && IDManager.indexOf("MNGR-")!=0){
+        if(!IDManager.contains("MNGR-") || IDManager.indexOf("MNGR-")!=0){
             throw new ExceptionID();
         }else if(bonusBulanan<600000 || bonusBulanan>1400000){
             throw new ExceptionBonus();
-        }else if(!alamatManager.contains("jln.") && alamatManager.indexOf("jln.")!=0){
+        }else if(!alamatManager.contains("jln.") || alamatManager.indexOf("jln.")!=0){
             throw new ExceptionAlamat();
+        }else{
+            this.IDManager = IDManager;
+            this.alamatManager = alamatManager;
+            this.bonusBulanan = bonusBulanan;
         }
     }
     
